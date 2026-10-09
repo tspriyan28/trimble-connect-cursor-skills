@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Bug 2 PR runtime data
+bug-2-pr-web/data/

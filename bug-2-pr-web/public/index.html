@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bug 2 PR</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="card">
+        <header class="header">
+          <h1>Bug 2 PR</h1>
+          <p>
+            Link a jira ticket to a repository and branch to start an automated
+            fix PR.
+          </p>
+        </header>
+
+        <div id="formError" class="error-banner" role="alert"></div>
+
+        <form id="bugForm" novalidate>
+          <div class="field">
+            <label for="jiraTicket">Jira ticket <span class="req">*</span></label>
+            <input
+              type="text"
+              id="jiraTicket"
+              name="jiraTicket"
+              placeholder="https://jira.trimble.tools/browse/TQARVIS-1234"
+              autocomplete="off"
+              required
+            />
+            <p class="hint">
+              Full jira URL or issue key (e.g. TQARVIS-1234)
+            </p>
+          </div>
+
+          <div class="field">
+            <label for="repository">Repository <span class="req">*</span></label>
+            <select id="repository" name="repository" required>
+              <option value="">Select a repository</option>
+            </select>
+            <p class="hint" id="repoHint">
+              GitHub URL will appear after you select a repository.
+            </p>
+          </div>
+
+          <div class="field">
+            <label for="branch">Branch <span class="req">*</span></label>
+            <input
+              type="text"
+              id="branch"
+              name="branch"
+              placeholder="e.g. main or bugfix/TQARVIS-1234-description"
+              required
+            />
+            <p class="hint">Base or feature branch for the fix.</p>
+          </div>
+
+          <div class="field">
+            <label for="additionalContext">Additional context</label>
+            <textarea
+              id="additionalContext"
+              name="additionalContext"
+              placeholder="Bug summary, root cause ID, environment, logs, repro steps..."
+            ></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn btn-secondary" id="clearBtn">
+              Clear
+            </button>
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="runSection" class="card card--wide hidden">
+        <div class="run-panel">
+          <h2>Agent run</h2>
+          <div class="run-meta">
+            <span
+              >Status: <span id="runStatus" class="status-pill status-pill--running">Starting</span></span
+            >
+            <span id="runIdLine" class="hidden">Run: <code id="runId"></code></span>
+            <a id="openInCursor" href="#" target="_blank" rel="noopener"
+              >Open full run in Cursor →</a
+            >
+          </div>
+          <div id="chatLog" class="chat-log">
+            <p class="chat-empty">Waiting for agent output…</p>
+          </div>
+          <div id="summarySection" class="summary-grid hidden">
+            <div class="summary-block">
+              <h3>RCA</h3>
+              <p id="outRca"></p>
+            </div>
+            <div class="summary-block">
+              <h3>Problematic code</h3>
+              <pre id="outProblematic"></pre>
+            </div>
+            <div class="summary-block">
+              <h3>Applied fix</h3>
+              <pre id="outFix"></pre>
+            </div>
+            <div class="summary-block">
+              <h3>Explanation</h3>
+              <p id="outExplanation"></p>
+            </div>
+            <div class="summary-block">
+              <h3>Pull request</h3>
+              <p><a id="outPr" href="#" target="_blank" rel="noopener"></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

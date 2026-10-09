@@ -1,0 +1,26 @@
+[
+  {
+    "id": "trimble-connect-platform",
+    "label": "trimble-connect-platform (TCPS monolith)",
+    "githubUrl": "https://github.com/Trimble-Connect/trimble-connect-platform",
+    "defaultBranch": "develop"
+  },
+  {
+    "id": "trimble-connect-files-service",
+    "label": "trimble-connect-files-service",
+    "githubUrl": "https://github.com/Trimble-Connect/trimble-connect-files-service",
+    "defaultBranch": "main"
+  },
+  {
+    "id": "trimble-connect-permissions-service",
+    "label": "trimble-connect-permissions-service",
+    "githubUrl": "https://github.com/Trimble-Connect/trimble-connect-permissions-service",
+    "defaultBranch": "main"
+  },
+  {
+    "id": "fileservice-tcps-trigger",
+    "label": "fileservice-tcps-trigger",
+    "githubUrl": "https://github.com/Trimble-Connect/fileservice-tcps-trigger",
+    "defaultBranch": "main"
+  }
+]
