@@ -1,0 +1,13 @@
+{
+  "environments_scoped": [
+    "int",
+    "qa",
+    "stage",
+    "prod"
+  ],
+  "total_checked": 312,
+  "found": 312,
+  "missing_count": 0,
+  "missing": [],
+  "list_errors": []
+}
