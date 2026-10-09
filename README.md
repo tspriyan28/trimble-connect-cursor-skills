@@ -17,7 +17,6 @@ Open this folder in Cursor (alone or as a workspace root) so skills under `.curs
 ```
 .cursor/skills/
 └── bug-fix/              # /bug-fix — JIRA → repro → CloudWatch → fix → PR
-bug-fix/                  # Same skill (legacy path; kept in sync with .cursor/skills/bug-fix)
 bug-2-pr-web/             # Local UI → Cursor Automation webhook
 ```
 

@@ -202,7 +202,7 @@ python scripts/api_client.py \
   --output full
 ```
 
-**Script Location:** `trimble-connect-cursor-skills/.cursor/skills/bug-fix/scripts/api_client.py` (or `bug-fix/scripts/api_client.py` in this repo)
+**Script Location:** `.cursor/skills/bug-fix/scripts/api_client.py` in this repository
 
 **Expected Output:**
 - HTTP status code
